@@ -11,13 +11,13 @@ h1 {
 h2 {
     font-family: 'Holtwood One SC', serif;
     color: #FF7F50;
-    font-size: small;
+    font-size: medium;
 }
 
 .score {
     font-family: 'Holtwood One SC', serif;
     color: #FF7F50;
-    font-size: small;
+    font-size: medium;
 }
 
 #main-header {
@@ -38,7 +38,7 @@ h2 {
 
  
 .weapon-image {
-    width: 5%;
+    width: 7%;
     height: auto;
     border-radius: 20%;
     border-style: dotted;
