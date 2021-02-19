@@ -11,12 +11,13 @@ h1 {
 h2 {
     font-family: 'Holtwood One SC', serif;
     color: #FF7F50;
-    font-size: medium;
+    font-size: small;
 }
 
 .score {
     font-family: 'Holtwood One SC', serif;
-    color: #FF7F50
+    color: #FF7F50;
+    font-size: small;
 }
 
 #main-header {
