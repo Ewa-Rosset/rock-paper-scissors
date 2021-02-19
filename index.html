@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="main-header">
+        <div id="container"></div>
+            <h1>Rock Paper Scissors</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2 id="weapon-selection">Choose Your Weapon</h2>
+    </div>
+    <div class="wrapper">  
+        <hr>
+        <div class="human-player">
+            <div class="weapon-box">
+                <img id="rock" class="weapon-image pl" src="rock2.png" alt="rock">
+                <img id="paper" class="weapon-image pl" src="paper2.png" alt="paper">
+                <img id="scissors" class="weapon-image pl" src="scissors.png" alt="scissors">
+            </div>
+        </div>
+        <hr>
+        <div class="scoreboard">
+            <div class="h-scorecard">
+                <h2>Human</h2>
+                <div class="score">Score: <span id="h-score">0</span></div>
+            </div>
+            <div class="c-scorecard">
+                <h2>Machine</h2>
+                <div class="score">Score: <span id="c-score">0</span></div>
+            </div>
+        </div>
+        <div>
+            <p id="finalText"></p>
+        </div>
+    </div>
+
+
+    <script>
+        
+        //Global Variables
+
+        let comp_score = 0 
+        let user_score = 0
+        let count = 0
+        let result = ""
+
+        const tools = Array.from(document.querySelectorAll('.pl'));
+        tools.forEach(pl => pl.addEventListener('click', playGame));
+
+        const cScore = document.getElementById('c-score');
+        const hScore = document.getElementById('h-score');
+        const tScore = document.getElementById('finalText');
+
+
+        // Functions
+
+        function test() {
+            console.log(event.target.id);
+            alert("Hello World");
+        }
+
+        function isGameOver() {
+            return user_score == 5 || comp_score == 5
+        }
+
+        function updateScores() {
+            cScore.innerHTML = comp_score;
+            hScore.innerHTML = user_score;
+        }
+
+        function updateTextScore() {
+            tScore.innerHTML = result;
+            
+        }
+
+        function computerPlay() {
+            let items = ['rock', 'paper', 'scissors'];
+            item = items[Math.floor(Math.random() * items.length)];
+            return item;
+        }
+
+
+        function getWinner(playerSelection, computerSelection) {
+
+        if (playerSelection == computerSelection) {
+            result = "It's a tie. No points!"
+
+        } else if (playerSelection == 'rock' && computerSelection=="scissors" ||
+        playerSelection == 'paper' && computerSelection=="rock"||
+        playerSelection == 'scissors' && computerSelection=="paper") {
+
+            result = ("It's a win: " + playerSelection + " beats " + computerSelection);
+ 
+            return user_score++;
+
+        } else {
+            result = ("You lost: " + computerSelection + " beats " + playerSelection);
+      
+            return comp_score++;
+            }   
+        }
+
+        function playGame(e) {
+            if (isGameOver()) {
+                alert("Game is over. Click F5 to play again.");
+                return;
+                }
+            
+            const playerSelection = e.target.id;
+            const computerSelection = computerPlay()
+
+            console.log("Test Play " + playerSelection);
+            console.log("Test Play " + computerSelection);
+                
+            getWinner(playerSelection, computerSelection);
+
+            if (isGameOver()) {
+                
+                if (comp_score == 5){
+                    result = "Game Over! You lost!"
+                } else {
+                    result = "Game Over! You won!"
+                }
+        
+            };
+        
+            updateScores();
+
+            updateTextScore();
+        
+        }
+
+  
+    </script>
+
+</body>
+
+</html>

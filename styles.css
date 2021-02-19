@@ -1,0 +1,114 @@
+html {
+    background-color: #FFBEA8;
+}
+
+h1 {
+    font-family: 'Holtwood One SC', serif;
+    color: #FF7F50;
+}
+
+h2 {
+    font-family: 'Holtwood One SC', serif;
+    color: #FF7F50;
+}
+
+.score {
+    font-family: 'Holtwood One SC', serif;
+    color: #FF7F50
+}
+
+#main-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: coral;
+    }
+
+#weapon-selection {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: #FF4500;
+    }
+
+ 
+.weapon-image {
+    width: 10%;
+    height: auto;
+    border-radius: 20%;
+    border-style: dotted;
+    border-color: coral;
+    margin: auto;
+}
+
+.weapon-box {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.c-img {
+    width: 10%;
+    height: auto;
+}
+
+.h-img{
+    width: 10%;
+    height: auto;
+
+}
+
+.weapon-box {
+    padding: 30px;
+}
+
+hr {
+    border: dashed rgb(247, 243, 242) 9px;
+    border-bottom: none;
+    width: 100%;
+    margin: 10px auto;
+    
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #FF4500;
+    box-shadow: 0 0 1rem #FF4500;
+  }
+  
+.weapon-image.pl:hover{
+    transform: scale(1.1);
+    border-color: #FF4500;
+    box-shadow: 0 0 1rem #FF4500;
+  }
+
+.scoreboard {
+    display: flex; 
+    justify-content: center;
+}
+
+.h-scorecard {
+    margin-right:5%;
+}
+
+.score {
+    text-align: center;
+}
+
+span {
+    color: coral;
+}
+
+#finalText {
+    margin: 5%;
+    font-family: 'Holtwood One SC', serif;
+    color:rgba(107, 107, 44, 0.333);
+    text-align: center;
+    font-size: large;
+
+}
+
