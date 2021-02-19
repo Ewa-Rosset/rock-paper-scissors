@@ -70,7 +70,7 @@ hr {
     border: dashed rgb(247, 243, 242) 9px;
     border-bottom: none;
     width: 100%;
-    margin: 30px auto;
+    margin: 10px auto;
     
 }
 
@@ -104,7 +104,7 @@ span {
 }
 
 #finalText {
-    margin: 10%;
+    margin: 5%;
     font-family: 'Holtwood One SC', serif;
     color:rgba(107, 107, 44, 0.333);
     text-align: center;
